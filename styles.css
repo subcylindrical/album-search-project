@@ -103,7 +103,7 @@ ul .result:hover {
   box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.188);
 }
 
-ul .result:hover .get-lyrics-btn {
+ul .result:hover .get-album-btn {
   opacity: 1;
   transform: scaleX(1);
 }
@@ -120,8 +120,8 @@ ul .result:hover .get-lyrics-btn {
   transition: font-size 0.3s;
 }
 
-/* Lyrics Button */
-.get-lyrics-btn {
+/* album Button */
+.get-album-btn {
   display: block;
   padding: 3px;
   font-size: 1.3rem;
@@ -140,13 +140,13 @@ ul .result:hover .get-lyrics-btn {
   transition: background 0.2s, opacity 0.1s, transform 0.15s, color 0.15s;
 }
 
-.get-lyrics-btn:hover {
+.get-album-btn:hover {
   background: gold;
   color: black;
 }
 
-/* Lyrics */
-.lyrics {
+/* album */
+.album {
   z-index: -5;
   line-height: 2rem;
   max-height: 0;
@@ -154,36 +154,36 @@ ul .result:hover .get-lyrics-btn {
   transition: opacity 0.3s, max-height 0.5s ease, margin 0.2s;
 }
 
-/* Show Lyrics */
-.result.show-lyrics {
+/* Show album */
+.result.show-album {
   background: white;
   box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.188);
 }
 
-.show-lyrics {
+.show-album {
   flex-direction: column;
-  /* animation: expand-lyrics 2s;
+  /* animation: expand-album 2s;
   animation-iteration-count: 1; */
 }
 
-.show-lyrics .lyrics {
+.show-album .album {
   z-index: 1;
   max-height: 1000px;
   opacity: 1;
   margin: 5%;
 }
 
-.result.show-lyrics:hover {
+.result.show-album:hover {
   background: white;
   cursor: auto;
   color: black;
 }
 
-.show-lyrics .get-lyrics-btn {
+.show-album .get-album-btn {
   display: none;
 }
 
-.show-lyrics .song-artist-result {
+.show-album .song-artist-result {
   font-size: 2.75rem;
 }
 
@@ -207,7 +207,7 @@ ul .result:hover .get-lyrics-btn {
   transform: translateY(-1px);
 }
 
-.show-lyrics .x-btn {
+.show-album .x-btn {
   display: flex;
 }
 
