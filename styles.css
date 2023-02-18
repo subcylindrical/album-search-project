@@ -59,3 +59,181 @@ input.search-bar {
 .btn:hover {
   cursor: pointer;
 }
+
+/* Inner Result Wrapper */
+.inner-result-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Result List */
+ul {
+  padding: 0;
+}
+
+.results-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.results-list {
+  width: 550px;
+}
+
+/* Results */
+.result {
+  list-style: none;
+  background: #cacfd6;
+  padding: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  border-radius: 2px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+ul .result:hover {
+  background: #896e70;
+  cursor: pointer;
+  color: rgb(244, 244, 244);
+  box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.188);
+}
+
+ul .result:hover .get-lyrics-btn {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.artist-result {
+  font-weight: 600;
+}
+
+.artist-result::after {
+  content: ' - ';
+}
+
+.song-artist-result {
+  transition: font-size 0.3s;
+}
+
+/* Lyrics Button */
+.get-lyrics-btn {
+  display: block;
+  padding: 3px;
+  font-size: 1.3rem;
+  width: auto;
+  outline: none;
+  border: none;
+  background: rgba(237, 209, 145, 0);
+  border-radius: 5px;
+  opacity: 0;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #abb7c1;
+  transform: scaleX(0.75);
+  transform-origin: 0%;
+  transition: background 0.2s, opacity 0.1s, transform 0.15s, color 0.15s;
+}
+
+.get-lyrics-btn:hover {
+  background: gold;
+  color: black;
+}
+
+/* Lyrics */
+.lyrics {
+  z-index: -5;
+  line-height: 2rem;
+  max-height: 0;
+  opacity: 0;
+  transition: opacity 0.3s, max-height 0.5s ease, margin 0.2s;
+}
+
+/* Show Lyrics */
+.result.show-lyrics {
+  background: white;
+  box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.188);
+}
+
+.show-lyrics {
+  flex-direction: column;
+  /* animation: expand-lyrics 2s;
+  animation-iteration-count: 1; */
+}
+
+.show-lyrics .lyrics {
+  z-index: 1;
+  max-height: 1000px;
+  opacity: 1;
+  margin: 5%;
+}
+
+.result.show-lyrics:hover {
+  background: white;
+  cursor: auto;
+  color: black;
+}
+
+.show-lyrics .get-lyrics-btn {
+  display: none;
+}
+
+.show-lyrics .song-artist-result {
+  font-size: 2.75rem;
+}
+
+/* Close Lyric Button */
+.x-btn {
+  display: none;
+  width: 25px;
+  height: 25px;
+  outline: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.x-btn:focus {
+  transform: scale(0.9);
+}
+
+.x-btn span {
+  margin: auto;
+  transform: translateY(-1px);
+}
+
+.show-lyrics .x-btn {
+  display: flex;
+}
+
+/* Page Scroll */
+.page-scroll-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.page-scroll-wrapper .btn {
+  padding: 5px;
+  letter-spacing: 1px;
+  margin: 1rem;
+}
+
+/* Animations */
+@keyframes expand-lyrics {
+  0% {
+    background: #896e70;
+    color: rgb(244, 244, 244);
+    height: 40.95px;
+  }
+  100% {
+    background: white;
+    color: black;
+    height: 600px;
+  }
+}
