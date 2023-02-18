@@ -223,17 +223,3 @@ ul .result:hover .get-lyrics-btn {
   letter-spacing: 1px;
   margin: 1rem;
 }
-
-/* Animations */
-@keyframes expand-lyrics {
-  0% {
-    background: #896e70;
-    color: rgb(244, 244, 244);
-    height: 40.95px;
-  }
-  100% {
-    background: white;
-    color: black;
-    height: 600px;
-  }
-}
