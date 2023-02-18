@@ -129,7 +129,7 @@ ul .result:hover .get-lyrics-btn {
   outline: none;
   border: none;
   background: rgba(237, 209, 145, 0);
-  border-radius: 5px;
+  border-radius: 3px;
   opacity: 0;
   font-style: italic;
   font-weight: 500;
