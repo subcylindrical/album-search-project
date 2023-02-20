@@ -1,2 +1,3 @@
-# lyrics-search-project
-Utilizes the lyrics.ovh api to access the lyrics of songs that a match search query.
+# album-search-project
+
+Utilizes the album.ovh api to access the album of songs that a match search query.
