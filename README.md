@@ -1,3 +1,3 @@
 # album-search-project
 
-Utilizes the album.ovh api to access the album of songs that a match search query.
+Utilizes the lastfm api to access an array of albums that a match search query.
