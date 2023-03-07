@@ -74,7 +74,7 @@ function toggleAlbumClass(e) {
 // Fetch Song Data
 async function fetchAlbums(albumPrompt) {
   const albumDatum = await fetch(
-    `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${albumPrompt}&api_key=17ba43496b63af18f69826bc04d8b940&limit=10&page=${page}&format=json`
+    `https://ws.audioscrobbler.com/2.0/?method=album.search&album=${albumPrompt}&api_key=17ba43496b63af18f69826bc04d8b940&limit=10&page=${page}&format=json`
   );
   const parsedAlbums = await albumDatum.json();
   const albumListArray = parsedAlbums.results.albummatches.album;
